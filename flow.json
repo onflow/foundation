@@ -1,0 +1,13 @@
+{
+    "emulators": {},
+    "networks": {
+      "mainnet": {
+        "host": "access.mainnet.nodes.onflow.org:9000",
+        "chain": "flow-mainnet"
+      }
+    },
+    "accounts": {},
+    "contracts": {},
+    "deployments": {}
+  }
+  
