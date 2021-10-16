@@ -1,6 +1,10 @@
 {
     "emulators": {},
     "networks": {
+        "emulator": {
+            "host": "127.0.0.1:3569",
+            "chain": "flow-emulator"
+        },
         "mainnet": {
             "host": "access.mainnet.nodes.onflow.org:9000",
             "chain": "flow-mainnet"
