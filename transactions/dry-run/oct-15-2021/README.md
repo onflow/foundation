@@ -22,19 +22,13 @@ flow transactions build ./templates/hello.cdc \
 ## Scott Signs
 
 ```sh
-flow transactions sign ./transactions/dry-run/oct-15-2021/hello1.rlp \
-  --signer scott \
-  --filter payload \
-  --save ./transactions/dry-run/oct-15-2021/hello2.rlp
+flow transactions sign ./transactions/dry-run/oct-15-2021/hello1.rlp --signer scott --filter payload --save ./transactions/dry-run/oct-15-2021/hello2.rlp
 ```
 
 ## Jonathan Signs
 
 ```sh
-flow transactions sign ./transactions/dry-run/oct-15-2021/hello2.rlp \
-  --signer jonathan \
-  --filter payload \
-  --save ./transactions/dry-run/oct-15-2021/hello3.rlp
+flow transactions sign ./transactions/dry-run/oct-15-2021/hello2.rlp --signer jonathan --filter payload --save ./transactions/dry-run/oct-15-2021/hello3.rlp
 ```
 
 
