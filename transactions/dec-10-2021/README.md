@@ -37,3 +37,5 @@ flow transactions sign ./transactions/dec-10-2021/transfer-flow-dec-10-sig-1.rlp
 ```sh
 flow transactions send-signed --network mainnet ./transactions/dec-10-2021/transfer-flow-dec-10-sig-2.rlp
 ```
+
+Result: https://flowscan.org/transaction/ed2a7711c39eeef7f07aefc4a456bfff9d9f77bd099a00f92859b4182fabf107
