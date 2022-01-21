@@ -2,7 +2,7 @@
 
 > January 21st, 2022
 
-This transaction transfers a total of 210,305.68 FLOW to account 0x07c48471ca70a25c for the purpose of distributing payments to ecosystem participants.
+This transaction transfers a total of 210,305.68 FLOW to account 0x07c48471ca70a25c for the purpose of distributing payments to promote, expand education and encourage the adoption of FLOW tokens and the Flow Blockchain and their related infrastructure and ecosystems.
 
 ## Build
 
