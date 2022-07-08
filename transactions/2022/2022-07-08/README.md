@@ -9,7 +9,7 @@ This transaction adds a new key to the Foundation account, under the control of 
 ```sh
 flow transactions build ./templates/addKey.cdc \
   --network mainnet \
-  --arg String: \
+  --arg String:f847b840ad01d02c78194bd07622c43f57c9f7a21390ade58ef26de0d5b9a35325b7526b30c4a429c324c3c67474919966a3047527cd2a10daf7893542dbd554a13d447002018201f4 \
   --proposer 0x89c1608db1c451ee \
   --proposer-key-index 0 \
   --authorizer 0x89c1608db1c451ee \
