@@ -13,9 +13,6 @@
                 "index": 2,
                 "signatureAlgorithm": "ECDSA_secp256k1",
                 "hashAlgorithm": "SHA2_256",
-                "context": {
-                    "resourceName": "projects/temporal-storm-355719/locations/us-east1/keyRings/FlowFoundation-Lemmerman2022/cryptoKeys/FlowFoundation-Lemmerman2022/cryptoKeyVersions/1"
-                },
                 "resourceID": "projects/temporal-storm-355719/locations/us-east1/keyRings/FlowFoundation-Lemmerman2022/cryptoKeys/FlowFoundation-Lemmerman2022/cryptoKeyVersions/1"
             }
         }

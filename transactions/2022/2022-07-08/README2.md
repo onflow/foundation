@@ -21,7 +21,7 @@ flow transactions build ./templates/removeKey.cdc \
 ## Stephanie Signs
 
 ```sh
-flow transactions sign ./transactions/2022/2022-07-08/remove-key-july-08.rlp --signer stephanie --config flow-stephanie.json --filter payload --save ./transactions/2022/2022-07-08/remove-key-july-08-sig-1.rlp
+flow transactions sign ./transactions/2022/2022-07-08/remove-key-july-08.rlp --signer stephanie --config-path flow-stephanie.json --filter payload --save ./transactions/2022/2022-07-08/remove-key-july-08-sig-1.rlp
 ```
 
 ## Jonathan Signs
