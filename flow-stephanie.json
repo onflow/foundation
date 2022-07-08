@@ -1,0 +1,22 @@
+{
+    "emulators": {},
+    "networks": {
+        "emulator": "127.0.0.1:3569",
+        "mainnet": "access.mainnet.nodes.onflow.org:9000",
+        "testnet": "access.devnet.nodes.onflow.org:9000"
+    },
+    "accounts": {
+        "stephanie": {
+            "address": "89c1608db1c451ee",
+            "key": {
+                "type": "google-kms",
+                "index": 2,
+                "signatureAlgorithm": "ECDSA_secp256k1",
+                "hashAlgorithm": "SHA2_256",
+                "resourceID": "projects/temporal-storm-355719/locations/us-east1/keyRings/FlowFoundation-Lemmerman2022/cryptoKeys/FlowFoundation-Lemmerman2022/cryptoKeyVersions/1"
+            }
+        }
+    },
+    "contracts": {},
+    "deployments": {}
+}
