@@ -36,4 +36,4 @@ flow transactions sign ./transactions/2022/2022-07-27/add-key-july-27-sig-1.rlp 
 flow transactions send-signed --network mainnet ./transactions/2022/2022-07-27/add-key-july-27-sig-2.rlp
 ```
 
-Result: https://flowscan.org/transaction/
+Result: https://flowscan.org/transaction/8fbc3cca42e06b275dbd6dd7741e0f825391588fa5f33bf7b99a2b0f9835740f
