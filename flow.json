@@ -11,22 +11,6 @@
         }
     },
     "accounts": {
-        "scott": {
-            "address": "89c1608db1c451ee",
-            "keys": [
-                {
-                    "type": "google-kms",
-                    "index": 0,
-                    "signatureAlgorithm": "ECDSA_secp256k1",
-                    "hashAlgorithm": "SHA2_256",
-                    "context": {
-                        "resourceName": "projects/flowfoundationproject/locations/global/keyRings/Flow/cryptoKeys/Service-account/cryptoKeyVersions/1"
-                    },
-                    "resourceID": "projects/flowfoundationproject/locations/global/keyRings/Flow/cryptoKeys/Service-account/cryptoKeyVersions/1"
-                }
-            ],
-            "chain": "flow-mainnet"
-        },
         "jonathan": {
             "address": "89c1608db1c451ee",
             "keys": [
