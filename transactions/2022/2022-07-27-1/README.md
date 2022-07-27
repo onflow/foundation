@@ -2,7 +2,7 @@
 
 > July 27th, 2022
 
-This transaction removes a key index 0 to the Foundation account, under the control of Stephanie Lemmerman. 
+This transaction removes a key index 2 from the Foundation account, under the control of Stephanie Lemmerman. 
 
 ## Build
 
