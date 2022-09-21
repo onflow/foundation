@@ -37,4 +37,4 @@ flow transactions sign ./transactions/2022/2022-09-21/transfer-flow-sept-21-sig-
 flow transactions send-signed --network mainnet ./transactions/2022/2022-09-21/transfer-flow-sept-21-sig-2.rlp
 ```
 
-Result: https://flowscan.org/transaction/
+Result: https://flowscan.org/transaction/c123dc05ccfb8dd9828bec69b0232a9712cb54ddae6bddb4a83dc58eac42a63a
