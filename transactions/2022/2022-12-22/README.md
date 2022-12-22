@@ -7,10 +7,8 @@ This transaction transfers a total of 750000.0 FLOW to account 0xd5234abb66587ac
 ## Build
 
 ```sh
-flow transactions build ./templates/transferFLOW.cdc \
+flow transactions build ./templates/transferFLOW.cdc "750000.0" 0xd5234abb66587ac5 \
   --network mainnet \
-  --arg UFix64:750000.0 \
-  --arg Address:0xd5234abb66587ac5 \
   --proposer 0x89c1608db1c451ee \
   --proposer-key-index 1 \
   --authorizer 0x89c1608db1c451ee \
