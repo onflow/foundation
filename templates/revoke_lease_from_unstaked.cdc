@@ -14,9 +14,6 @@ transaction (amount: UFix64, to: Address) {
         let tokenManagerRef = signer.borrow<&LockedTokens.LockedTokenManager>(from: LockedTokens.LockedTokenManagerStoragePath)
             ?? panic("Could not borrow reference to LockedTokenManager")
 
-        // Withdraw enough tokens to pay for fees, assuming there are some rewards in the rewards bucket
-        tokenManagerRef.deposit(from: <-tokenManagerRef.nodeStaker?.withdrawRewardedTokens(amount: 0.0001)!)
-
         // Withdraw tokens from the signer's stored vault
         self.sentVault <- tokenManagerRef.nodeStaker?.withdrawUnstakedTokens(amount: amount)!
     }
