@@ -15,6 +15,16 @@
                 "hashAlgorithm": "SHA2_256",
                 "resourceID": "projects/flow-foundation-key/locations/us/keyRings/KristinSmithKey/cryptoKeys/KristinFlowFoundationKey/cryptoKeyVersions/1"
             }
+        },
+        "alex": {
+            "address": "89c1608db1c451ee",
+            "key": {
+                "type": "google-kms",
+                "index": 4,
+                "signatureAlgorithm": "ECDSA_P256",
+                "hashAlgorithm": "SHA2_256",
+                "resourceID": "projects/keyz-380521/locations/us/keyRings/Key_AWS/cryptoKeys/Key_AWS1/cryptoKeyVersions/1"
+            }
         }
     },
     "contracts": {},
