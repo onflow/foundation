@@ -1,4 +1,4 @@
-# Stage LendingPool Flow (0x7492e2f9b4acea9a)
+# 1. Stage LendingPool Flow (0x7492e2f9b4acea9a)
 
 ### Increment Builds:
 ```
@@ -29,7 +29,7 @@ flow-c1 transactions send-signed ./transactions/2024/2024-08-26/Lending/stage-Le
 ```
 
 
-# Stage LendingPool FUSD (0x90f55b24a556ea45)
+# 2. Stage LendingPool FUSD (0x90f55b24a556ea45)
 
 ### Increment Builds:
 ```
@@ -60,7 +60,7 @@ flow-c1 transactions send-signed ./transactions/2024/2024-08-26/Lending/stage-Le
 ```
 
 
-# Stage LendingPool USDC (0x8334275bda13b2be)
+# 3. Stage LendingPool USDC (0x8334275bda13b2be)
 
 ### Increment Builds:
 ```
@@ -91,7 +91,7 @@ flow-c1 transactions send-signed ./transactions/2024/2024-08-26/Lending/stage-Le
 ```
 
 
-# Stage LendingPool BLT (0x67539e86cbe9b261)
+# 4. Stage LendingPool BLT (0x67539e86cbe9b261)
 
 ### Increment Builds:
 ```
@@ -122,7 +122,7 @@ flow-c1 transactions send-signed ./transactions/2024/2024-08-26/Lending/stage-Le
 ```
 
 
-# Stage LendingPool stFlow (0x44fe3d9157770b2d)
+# 5. Stage LendingPool stFlow (0x44fe3d9157770b2d)
 
 ### Increment Builds:
 ```
