@@ -121,4 +121,19 @@ flow-c1 transactions send-signed ./transactions/2024/2024-08-26/Swap/stage-SwapP
 
 
 # 5. Stage SwapPair instances:
-* See sub-directories
+* See files in sub-directories
+
+
+### Increment Builds and Signs:
+```
+./gen.sh 
+```
+
+### Flow Signs:
+```
+```
+
+### Send-signed:
+```
+./gen.sh multi_send
+```
