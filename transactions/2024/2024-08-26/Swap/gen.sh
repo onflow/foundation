@@ -236,10 +236,10 @@ function build_stable_pair_stflow() {
 function increment_sign_and_send() {
   flow-c1 transactions sign ./transactions/2024/2024-08-26/Swap/SwapPair-Instances/$1.signed1 \
     --signer $1 \
-	  --filter payload \
-	  --save ./transactions/2024/2024-08-26/Swap/SwapPair-Instances/$1.signed2 \
-	  --network mainnet \
-	  --yes
+    --filter payload \
+    --save ./transactions/2024/2024-08-26/Swap/SwapPair-Instances/$1.signed2 \
+    --network mainnet \
+    --yes
 
   flow-c1 transactions send-signed ./transactions/2024/2024-08-26/Swap/SwapPair-Instances/$1.signed2 --network mainnet --yes
 }
@@ -252,7 +252,7 @@ function multi_build() {
 
 function multi_sign2_and_send() {
   for i in ${!pair_vec[@]}; do
-	increment_sign_and_send ${pair_vec[$i]}
+    increment_sign_and_send ${pair_vec[$i]}
   done
 }
 
