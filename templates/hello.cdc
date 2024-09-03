@@ -1,5 +1,5 @@
 transaction {
-  prepare(signer: AuthAccount) {
+  prepare(signer: &Account) {
     log("Hello, World!")
   }
 }

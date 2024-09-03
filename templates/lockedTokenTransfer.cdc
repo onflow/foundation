@@ -21,15 +21,15 @@ transaction (recipient: Address, amount: UFix64) {
     let lockedReceiver: &AnyResource{FungibleToken.Receiver}
 
     prepare(signer: AuthAccount) {
-        // Get a reference to the signer's stored vault
-        let vaultRef = signer.borrow<&FlowToken.Vault>(from: /storage/flowTokenVault)
-            ?? panic("Could not borrow reference to the owner's Vault!")
+        // Get a reference to the admin's stored vault
+        let vaultRef = admin.storage.borrow<auth(FungibleToken.Withdraw) &FlowToken.Vault>(from: /storage/flowTokenVault)
+			?? panic("Could not borrow reference to the owner's Vault!")
 
         // Withdraw tokens from the signer's stored vault
         self.sentVault <- vaultRef.withdraw(amount: amount)
 
         let lockedAccountInfoRef = getAccount(recipient)
-            .getCapability<&LockedTokens.TokenHolder{LockedTokens.LockedAccountInfo}>(LockedTokens.LockedAccountInfoPublicPath)!
+            .capabilities.get<&LockedTokens.TokenHolder>(LockedTokens.LockedAccountInfoPublicPath)
             .borrow() ?? panic("Could not borrow a reference to public LockedAccountInfo")
 
         self.lockedBalance = lockedAccountInfoRef.getLockedAccountBalance()
@@ -37,8 +37,8 @@ transaction (recipient: Address, amount: UFix64) {
         self.lockedAddress = lockedAccountInfoRef.getLockedAccountAddress()
 
         self.lockedReceiver = getAccount(self.lockedAddress)
-          .getCapability(/public/lockedFlowTokenReceiver)!
-          .borrow<&{FungibleToken.Receiver}>()
+          .capabilities.get<&{FungibleToken.Receiver}>(/public/lockedFlowTokenReceiver)
+          .borrow()
           ?? panic("Unable to borrow receiver reference")
     }
 
@@ -47,3 +47,4 @@ transaction (recipient: Address, amount: UFix64) {
         self.lockedReceiver.deposit(from: <-self.sentVault)
     }
 }
+
