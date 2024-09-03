@@ -1,41 +1,32 @@
 import FungibleToken from 0xf233dcee88fe0abe
 import FiatToken from 0xb19436aae4d94622
 
+/// This script is used to add a USDCFlow.Vault resource to the signer's account
+/// so that they can use USDCFlow 
+///
+/// If the Vault already exist for the account,
+/// the script will return immediately without error
+/// 
+
 transaction {
 
-    prepare(signer: AuthAccount) {
+    prepare(signer: auth(Storage, BorrowValue, Capabilities, AddContract) &Account) {
 
-        // Return early if the account already stores a FiatToken Vault
-        if signer.borrow<&FiatToken.Vault>(from: FiatToken.VaultStoragePath) != nil {
+        // Return early if the account already stores a USDCFlow Vault
+        if signer.storage.borrow<&USDCFlow.Vault>(from: USDCFlow.VaultStoragePath) != nil {
             return
         }
 
         // Create a new ExampleToken Vault and put it in storage
-        signer.save(
-            <-FiatToken.createEmptyVault(),
-            to: FiatToken.VaultStoragePath
+        signer.storage.save(
+            <-USDCFlow.createEmptyVault(vaultType: Type<@USDCFlow.Vault>()),
+            to: USDCFlow.VaultStoragePath
         )
 
-        // Create a public capability to the Vault that only exposes
-        // the deposit function through the Receiver interface
-        signer.link<&FiatToken.Vault{FungibleToken.Receiver}>(
-            FiatToken.VaultReceiverPubPath,
-            target: FiatToken.VaultStoragePath
+        let receiver = signer.capabilities.storage.issue<&USDCFlow.Vault>(
+            USDCFlow.VaultStoragePath
         )
-
-        // Create a public capability to the Vault that only exposes
-        // the UUID() function through the VaultUUID interface
-        signer.link<&FiatToken.Vault{FiatToken.ResourceId}>(
-            FiatToken.VaultUUIDPubPath,
-            target: FiatToken.VaultStoragePath
-        )
-
-        // Create a public capability to the Vault that only exposes
-        // the balance field through the Balance interface
-        signer.link<&FiatToken.Vault{FungibleToken.Balance}>(
-            FiatToken.VaultBalancePubPath,
-            target: FiatToken.VaultStoragePath
-        )
-
+        signer.capabilities.publish(receiver, at: USDCFlow.ReceiverPublicPath)
+        signer.capabilities.publish(receiver, at: USDCFlow.VaultPublicPath)
     }
 }
